@@ -38,16 +38,14 @@ function start() {
     }
 
     document.getElementById("current-word").innerHTML = "  " + correctChoices.join("  ");
-
-    
-}
+};
 
 function reset() {
     livesRemain = 9;
     wrongChoice = [];
     correctChoices = [];
     start()
-}
+};
 
 function checkChoices(letter) {
     var letterCorrect = false;
@@ -65,9 +63,18 @@ function checkChoices(letter) {
     } else {
         wrongChoice.push(letter);
         livesRemain--;
-    }
+    }; 
+    // else if {
+    //     wrongChoice
+    // }
+
+
     // console.log(correctChoices);
 };
+// function to stop lives remaining from going down when they guess the same letter multiple times
+// function userGuesses () {
+//     if wrongChoice 
+// }
 
 function finish() {
 
