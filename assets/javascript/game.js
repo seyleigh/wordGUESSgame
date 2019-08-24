@@ -95,12 +95,16 @@ function finish() {
 
 start()
 document.onkeyup = function(event) {
-    document.getElementById("directions-text").style.cssText = "display: none"
+    if (event.keyCode >= 65 && event.keyCode <= 90){
+        document.getElementById("directions-text").style.cssText = "display: none"
     var choices = String.fromCharCode(event.keyCode).toLowerCase();
     checkChoices(choices);
-    // if (event.keyCode >= 65 && event.keyCode <= 90)
+    
     finish();
     // console.log(choices);
     document.getElementById("user-letters").innerHTML = "  " + wrongChoice.join(" ");
+    } else {
+        alert('Please use a letter a-z')
+    }
    
 };
