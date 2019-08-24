@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Hangman Game</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="flex-row pt-4">
+                <p class="btn btn-dark btn-lg btn-block col-8" id="directions-text">PRESS ANY LETTER TO BEGIN?</p>
+                <p class="btn btn-dark btn-lg btn-block col-8"">CURRENT WORD</p>
+                <p class="btn btn-dark btn-lg btn-block col-8" id="current-word"></p>
+                <p class="btn btn-dark btn-lg btn-block col-8">LETTERS GUESSED</p>
+                <p class="btn btn-dark btn-lg btn-block col-8" id="user-letters"></p>
+                <p class="btn btn-dark btn-lg btn-block col-8">TRIES REMAINING</p>
+                <p class="btn btn-dark btn-lg btn-block col-8" id="lives-remain"></p>
+                <p class="btn btn-dark btn-lg btn-block col-8">You got it</p>
+                <p class="btn btn-dark btn-lg btn-block col-8" id="winScore"></p>
+                <p class="btn btn-dark btn-lg btn-block col-8">You lost it</p>
+                <p class="btn btn-dark btn-lg btn-block col-8" id="lossScore"></p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/javascript/game.js"></script>
+ </body>
+</html>

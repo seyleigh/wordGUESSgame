@@ -1,0 +1,32 @@
+body, html {
+    height: 100%;
+    background-image:linear-gradient(to bottom right, #5c9cac, #5c2b94);
+    /* background-image: url(https://cdn.pixabay.com/photo/2017/10/29/23/44/anatomy-2901127_960_720.png); */
+}
+
+.main-container {
+    background-image: url(https://cdn.pixabay.com/photo/2017/10/29/23/44/anatomy-2901127_960_720.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right; 
+    /* background-image:linear-gradient(to bottom right, #5c9cac, #5c2b94); */
+    height: 100%;
+}
+
+/* #current-word {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif, cursive;
+    margin-bottom: 10px;
+    margin-top: 10px;
+} */
+
+
+
+
+
+
+
+
+
+
+/* https://cdn.pixabay.com/photo/2017/10/29/23/44/anatomy-2901127_960_720.png */
