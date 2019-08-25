@@ -1,23 +1,13 @@
 var words = [
-    "heart",
-    "cornea",
-    "stomach",
-    "pancreas",
-    "hypothalamus",
-    "phalanges",
-    "trachea",
-    "sclera",
-    "pharynx",
-    "uterus",
-    "femur",
-    "cerebrum",
-    "blood",
-    "tongue",
-    "epidermis"
+    "heart", "cornea", "stomach",
+    "pancreas", "hypothalamus", "phalanges",
+    "trachea", "sclera", "pharynx",
+    "uterus", "femur", "cerebrum",
+    "blood", "tongue", "epidermis"
 ];
 
 var currentWord = "";
-var lettersOfWord = [];
+var creatingWord = [];
 var blank = 0;
 var correctChoices = [];
 var wrongChoice = [];
@@ -27,17 +17,19 @@ var livesRemain = 9;
 
 function start() {
     currentWord = words[Math.floor(Math.random() * words.length)];
-    // console.log(currentWord);
+    console.log(currentWord);
 
-    lettersOfWord = currentWord.split("");
+    creatingWord = currentWord.split("");
 
-    blank = lettersOfWord.length;
+
+    blank = creatingWord.length;
 
     for (var i = 0; i < blank; i++) {
         correctChoices.push("_");
     }
 
     document.getElementById("current-word").innerHTML = "  " + correctChoices.join("  ");
+    
 };
 
 function reset() {
@@ -54,31 +46,33 @@ function checkChoices(letter) {
             letterCorrect = true;
         }
     }
+
     if (letterCorrect) {
         for (var i = 0; i < blank; i++) {
             if (currentWord[i] === letter) {
                 correctChoices[i] = letter;
             }
         }
-    } else {
+    } 
+    if (letterCorrect) return;
+
+    if (wrongChoice.indexOf(letter) < 0) {
         wrongChoice.push(letter);
         livesRemain--;
-    }; 
-    // else if {
-    //     wrongChoice
+    }
+    
+    // else {
+    //     wrongChoice.push(letter);
+    //     livesRemain--;
     // }
 
 
     // console.log(correctChoices);
 };
-// function to stop lives remaining from going down when they guess the same letter multiple times
-// function userGuesses () {
-//     if wrongChoice 
-// }
 
 function finish() {
 
-    if (lettersOfWord.toString() === correctChoices.toString()) {
+    if (creatingWord.toString() === correctChoices.toString()) {
         win++
         reset()
         document.getElementById("winScore").innerHTML = " " + win;
